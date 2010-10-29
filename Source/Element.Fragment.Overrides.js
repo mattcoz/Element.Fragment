@@ -1,3 +1,22 @@
+/*
+---
+
+name: Element.Fragment.Overrides
+
+description: Overrides typeOf and document.id to support a type of "fragment"
+
+license: MIT-style
+
+authors:
+- Matt Cosentino
+
+requires: core/1.3: [Element]
+
+provides: [Element.Fragment.Overrides]
+
+...
+*/
+
 window.typeOf = function(item){
 	if (item == null) return 'null';
 	if (item.$family) return item.$family();

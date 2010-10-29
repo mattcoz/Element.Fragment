@@ -1,3 +1,22 @@
+/*
+---
+
+name: Element.Fragment
+
+description: Adds Element type functionality to document fragments.
+
+license: MIT-style
+
+authors:
+- Matt Cosentino
+
+requires: [Element.Fragment.Overrides]
+
+provides: [Element.Fragment]
+
+...
+*/
+
 Browser.Fragment = window.DocumentFragment;
 
 var Fragment = function(){
@@ -42,7 +61,7 @@ if (!document.createDocumentFragment().contains) Fragment.implement('contains', 
 
 (function(){
 
-var methods = ['appendText','grab','inject','replaces','wraps','getFirst','getLast','getChildren','getWindow','getDocument','getElementById','empty','clone','getElements','getElement'], i;
+var methods = ['appendText','grab','inject','replaces','wraps','getFirst','getLast','getChildren','getWindow','getDocument','getElementById','empty','getElements','getElement'], i;
 
 for (i=0; name=methods[i++];) Fragment.implement(name, Element.prototype[name]);
 
